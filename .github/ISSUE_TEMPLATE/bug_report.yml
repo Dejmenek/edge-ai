@@ -1,0 +1,133 @@
+name: Bug report
+description: Create a report to help us improve
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **IMPORTANT:** Before submitting, please remove all sensitive data, secrets, tokens, or confidential information. Ensure you've redacted any NDA-covered information, IP addresses, resource names, or security-related details that shouldn't be publicly disclosed.
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Reproduction Steps
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened, including error messages and logs if applicable.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## Environment
+        *Please complete the following information*
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      placeholder: Ubuntu 22.04
+    validations:
+      required: true
+  - type: input
+    id: azure_cli_version
+    attributes:
+      label: Azure CLI Version
+      placeholder: 2.45.0
+    validations:
+      required: true
+  - type: input
+    id: terraform_version
+    attributes:
+      label: Terraform Version
+      placeholder: 1.5.7
+    validations:
+      required: true
+  - type: input
+    id: bicep_version
+    attributes:
+      label: Bicep Version
+      placeholder: 0.23.1
+    validations:
+      required: true
+  - type: input
+    id: kubernetes_version
+    attributes:
+      label: Kubernetes Version (if applicable)
+      placeholder: 1.27.3
+  - type: input
+    id: azure_iot_version
+    attributes:
+      label: Azure IoT Operations Version (if applicable)
+      placeholder: 1.0.0
+  - type: markdown
+    attributes:
+      value: |
+        ## Deployment Configuration
+        *If applicable, include information about your deployment configuration*
+  - type: input
+    id: blueprint_used
+    attributes:
+      label: Blueprint Used
+      placeholder: full-single-cluster
+  - type: input
+    id: resource_prefix
+    attributes:
+      label: Resource Prefix
+      placeholder: myedge
+  - type: dropdown
+    id: service_principals
+    attributes:
+      label: Service Principals
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: textarea
+    id: console_output
+    attributes:
+      label: Console Output/Logs
+      description: If applicable, add console output or logs to help explain your problem.
+      placeholder: |
+        Paste logs here
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots by dragging and dropping them here
+        or pasting them directly into this field to help explain your problem.
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here.
+  - type: textarea
+    id: possible_solution
+    attributes:
+      label: Possible Solution
+      description: If you have suggestions on how to fix the issue, please describe them here.
