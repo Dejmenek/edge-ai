@@ -1,0 +1,60 @@
+name: Documentation request
+description: Suggest improvements to the documentation
+title: "[DOCS] "
+labels: ["documentation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **IMPORTANT:** Before submitting, please remove all sensitive data, secrets, tokens, or confidential information. Ensure you've redacted any NDA-covered information, IP addresses, resource names, or security-related details that shouldn't be publicly disclosed.
+  - type: dropdown
+    id: documentation_area
+    attributes:
+      label: Documentation Area
+      options:
+        - "README files"
+        - "Component documentation"
+        - "Blueprint documentation"
+        - "GitHub Actions documentation"
+        - "Examples and tutorials"
+        - "Other"
+    validations:
+      required: true
+  - type: input
+    id: documentation_area_other
+    attributes:
+      label: If other, please specify
+  - type: textarea
+    id: current_documentation_issue
+    attributes:
+      label: Current Documentation Issue
+      description: Describe what's missing, unclear, or incorrect in the current documentation.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_improvement
+    attributes:
+      label: Suggested Improvement
+      description: Describe what should be added or changed in the documentation.
+    validations:
+      required: true
+  - type: textarea
+    id: why_this_matters
+    attributes:
+      label: Why This Matters
+      description: Explain why this documentation improvement is important.
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other context, links, or screenshots about the documentation request here.
+  - type: dropdown
+    id: willing_to_help
+    attributes:
+      label: Would You Be Willing to Help?
+      options:
+        - "Yes, I can help with documentation improvements."
+        - "No, I'm just suggesting the improvement."
+    validations:
+      required: true
