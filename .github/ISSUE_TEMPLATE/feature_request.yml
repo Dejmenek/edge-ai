@@ -1,0 +1,69 @@
+name: Feature request
+description: Suggest an idea for this project
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **IMPORTANT:** Before submitting, please remove all sensitive data, secrets, tokens, or confidential information. Ensure you've redacted any NDA-covered information, IP addresses, resource names, or security-related details that shouldn't be publicly disclosed.
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: Problem Statement
+      description: A clear and concise description of what problem this feature would solve.
+      placeholder: |
+        I'm always frustrated when [...]
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: alternative_solutions
+    attributes:
+      label: Alternative Solutions
+      description: A clear and concise description of any alternative solutions or features you've considered.
+  - type: checkboxes
+    id: target_components
+    attributes:
+      label: Target Components
+      description: Which components or blueprints would be affected by this feature?
+      options:
+        - label: Terraform modules
+        - label: Bicep modules
+        - label: Blueprints
+        - label: GitHub Actions
+        - label: Documentation
+        - label: Other
+    validations:
+      required: true
+  - type: input
+    id: target_components_other
+    attributes:
+      label: If other, please specify
+  - type: textarea
+    id: implementation_ideas
+    attributes:
+      label: Implementation Ideas
+      description: If you have ideas about how to implement this feature, please share them here.
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or mockups about the feature request here.
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: Describe the benefits of implementing this feature for users of the repository.
+  - type: textarea
+    id: potential_challenges
+    attributes:
+      label: Potential Challenges
+      description: Describe any potential challenges or considerations for implementing this feature.
